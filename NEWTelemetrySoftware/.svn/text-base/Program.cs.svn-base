@@ -1,0 +1,77 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+using System.Collections;
+
+static class Globals
+{
+    public const int JORDAN = 0x700;
+    public const int DCBA = 0x500;
+    public const int MCBA = 0x400;
+
+    static private Dictionary<uint, List<string>> entryNames = new Dictionary<uint, List<string>>{
+        {DCBA + 1, new List<string>{"motorCurrent", "motorVelocity"}},
+        {DCBA + 2, new List<string>{"busCurrent"}},
+        {MCBA + 2, new List<string>{"busCurrent"}},
+        {MCBA + 3, new List<string>{"vehicleVelocity", "motorVelocity"}},
+        {MCBA + 14, new List<string>{"DCBusAmpHours", "odometer"}}
+    };
+
+    static private Dictionary<uint, string> groupNames = new Dictionary<uint,string>{
+        {DCBA + 1, "MotorDriveDriverControls"},
+        {DCBA + 2, "MotorPowerDriverControls"},
+        {MCBA + 2, "BusMeasurement"},
+        {MCBA + 3, "VelocityMeasurement"}
+    };
+
+    public static string GetRowNameFromIdAndIndex(uint id, int index)
+    {
+        lock (typeof(Globals))
+        {
+            return entryNames[id][index];
+        }
+    }
+
+    public static string GetGroupNameFromId(uint id)
+    {
+        lock (typeof(Globals))
+        {
+            return groupNames[id];
+        }
+    }
+}
+
+namespace CanLogger
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            new LoggerCore().Start(); 
+        }
+    }
+
+    public class LoggerCore
+    {
+        CanUsbConnection _canUsbConn;
+        DBConnection _sqliteConn;
+        CanGui _gui;
+        
+        public void Start()
+        {
+            _sqliteConn = new DBConnection();
+            _canUsbConn = new CanUsbConnection(this, false);
+            _gui = new CanGui(_canUsbConn, _sqliteConn);
+            Application.Run(_gui);
+        }
+
+        public void PushMessageList(List<Message> msgList)
+        {
+            _sqliteConn.SaveMessageList(msgList);
+            _gui.AppendToMessageTable(msgList);
+        }
+    }
+}

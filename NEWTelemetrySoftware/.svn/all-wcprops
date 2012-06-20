@@ -1,0 +1,61 @@
+END
+CanUsbConnection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/elec/!svn/ver/1011/software/CanLoggerClient/CanUsbConnection.cs
+END
+CanLogger.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/elec/!svn/ver/994/software/CanLoggerClient/CanLogger.csproj
+END
+LawicelCanBus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/elec/!svn/ver/993/software/CanLoggerClient/LawicelCanBus.cs
+END
+SqliteConnection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/elec/!svn/ver/1011/software/CanLoggerClient/SqliteConnection.cs
+END
+CanGui.resx
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/elec/!svn/ver/993/software/CanLoggerClient/CanGui.resx
+END
+Message.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/elec/!svn/ver/993/software/CanLoggerClient/Message.cs
+END
+CanGui.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/elec/!svn/ver/993/software/CanLoggerClient/CanGui.Designer.cs
+END
+CanGui.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/elec/!svn/ver/1011/software/CanLoggerClient/CanGui.cs
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/elec/!svn/ver/1036/software/CanLoggerClient/Program.cs
+END
+CanLogger.sln
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/elec/!svn/ver/993/software/CanLoggerClient/CanLogger.sln
+END

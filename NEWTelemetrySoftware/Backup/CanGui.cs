@@ -1,0 +1,121 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Threading;
+
+namespace CanLogger
+{
+    public partial class CanGui : Form
+    {
+        CanUsbConnection _canUsbConn;
+        DBConnection _sqliteConn;
+        bool _started = false;
+
+        public CanGui(CanUsbConnection usbConn, DBConnection sqliteConn)
+        {
+            _canUsbConn = usbConn;
+            _sqliteConn = sqliteConn;
+            InitializeComponent();
+        }
+
+        private delegate void ListAppendDelegate(List<Message> msgList);
+        public void AppendToMessageTable(List<Message> msgList)
+         {
+            if (listTable.InvokeRequired)
+            {
+                ListAppendDelegate d = new ListAppendDelegate(AppendToMessageTable);
+                this.Invoke(d, new object[] { msgList });
+            }
+            else
+            {
+                foreach (Message msg in msgList)
+                {
+                    int len = msg.getLen();
+                    float[] arr = msg.getArr();
+
+                    for (int i = 0; i < len; ++i)
+                    {
+                        if (listTable.Items.Count > 300)
+                            listTable.Items.RemoveAt(300);
+
+                        ListViewItem curMessageItem;
+
+                        try
+                        {
+                            curMessageItem = listTable.Items.Insert(0, Globals.GetGroupNameFromId(msg.getId()));
+                        }
+                        catch (Exception x)
+                        {
+                            curMessageItem = listTable.Items.Insert(0, "index_not_found[" + msg.getId() + "]");
+                        }
+                        try
+                        {
+                            curMessageItem.SubItems.Add(Globals.GetRowNameFromIdAndIndex(msg.getId(), i));
+                        }
+                        catch (Exception x)
+                        {
+                            curMessageItem.SubItems.Add("index_not_found[" + msg.getId() + "][" + i + "]");
+                        }
+                        curMessageItem.SubItems.Add("0x" + msg.getId().ToString("X3"));
+                        curMessageItem.SubItems.Add(arr[i].ToString());
+                        curMessageItem.SubItems.Add(DateTime.Now.ToString("yyyy h:mm:ss:fff"));
+                    }
+                }
+            }
+        }
+
+        private void btStart_Click(object sender, EventArgs e)
+        {
+            if (_started)
+                return;
+
+            _started = true;
+
+            _sqliteConn.OpenDatabase("C:/test.db");
+            _sqliteConn.PrepareTables();
+
+            _canUsbConn.OpenConnection();
+            if (_canUsbConn.Connected())
+            {
+                Thread _canUsbThread = new Thread(_canUsbConn.MessageLoop);
+                _canUsbThread.Start();
+            }
+            else
+            {
+                System.Console.WriteLine("Could not connect to CAN");
+                return;
+            }
+
+            lblStatusRight.Text = "Connected";
+            lblStatusRight.ForeColor = Color.Green;
+        }
+
+        private void btStop_Click(object sender, EventArgs e)
+        {
+            lock (_canUsbConn)
+            {
+                _canUsbConn.Finish();
+            }
+            lblStatusRight.Text = "Disconnecting...";
+            lblStatusRight.ForeColor = Color.Orange;
+            while(!_canUsbConn.Connected())
+            {
+                Thread.Sleep(10);
+            }
+            lblStatusRight.Text = "Disconnected";
+            lblStatusRight.ForeColor = Color.Red;
+
+            _started = false;
+        }
+
+        private void btFlush_Click(object sender, EventArgs e)
+        {
+            listTable.Items.Clear();
+        }
+    }
+}

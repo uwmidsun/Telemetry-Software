@@ -1,0 +1,29 @@
+D:\Brian\Homework\Solar Car\CANLogger\CanLoggerClient\bin\Debug\CanLogger.exe
+D:\Brian\Homework\Solar Car\CANLogger\CanLoggerClient\bin\Debug\CanLogger.pdb
+D:\Brian\Homework\Solar Car\CANLogger\CanLoggerClient\bin\Debug\System.Data.SQLite.dll
+D:\Brian\Homework\Solar Car\CANLogger\CanLoggerClient\obj\Debug\ResolveAssemblyReference.cache
+D:\Brian\Homework\Solar Car\CANLogger\CanLoggerClient\obj\Debug\CanLogger.CanGui.resources
+D:\Brian\Homework\Solar Car\CANLogger\CanLoggerClient\obj\Debug\CanLogger.Properties.Resources.resources
+D:\Brian\Homework\Solar Car\CANLogger\CanLoggerClient\obj\Debug\CanLogger.csproj.GenerateResource.Cache
+D:\Brian\Homework\Solar Car\CANLogger\CanLoggerClient\obj\Debug\CanLogger.exe
+D:\Brian\Homework\Solar Car\CANLogger\CanLoggerClient\obj\Debug\CanLogger.pdb
+D:\Brian\Homework\Midnight Sun\CANLogger\CanLoggerClient\obj\Debug\CanLogger.exe
+D:\Brian\Homework\Midnight Sun\CANLogger\CanLoggerClient\obj\Debug\CanLogger.pdb
+D:\Brian\Homework\Midnight Sun\CANLogger\CanLoggerClient\bin\Debug\CanLogger.exe
+D:\Brian\Homework\Midnight Sun\CANLogger\CanLoggerClient\bin\Debug\CanLogger.pdb
+D:\Brian\Homework\Midnight Sun\CANLogger\CanLoggerClient\obj\Debug\ResolveAssemblyReference.cache
+D:\Brian\Homework\Midnight Sun\CANLogger\CanLoggerClient\obj\Debug\CanLogger.CanGui.resources
+D:\Brian\Homework\Midnight Sun\CANLogger\CanLoggerClient\obj\Debug\CanLogger.Properties.Resources.resources
+D:\Brian\Homework\Midnight Sun\CANLogger\CanLoggerClient\obj\Debug\CanLogger.csproj.GenerateResource.Cache
+D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\obj\Debug\CanLogger.exe
+D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\obj\Debug\CanLogger.pdb
+D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\bin\Debug\CanLogger.exe
+D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\obj\Debug\ResolveAssemblyReference.cache
+D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\obj\Debug\CanLogger.CanGui.resources
+D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\obj\Debug\CanLogger.Properties.Resources.resources
+D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\bin\Debug\CanLogger.pdb
+D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\bin\Debug\CanLogger.exe.config
+D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\obj\Debug\GenerateResource.read.1.tlog
+D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\obj\Debug\GenerateResource.write.1.tlog

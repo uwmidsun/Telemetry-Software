@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/elec/!svn/ver/993/software/CanLoggerClient/dll
+END
+canusbdrv.dll
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/elec/!svn/ver/993/software/CanLoggerClient/dll/canusbdrv.dll
+END
+ftd2xx64.dll
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/elec/!svn/ver/993/software/CanLoggerClient/dll/ftd2xx64.dll
+END
+System.Data.SQLite.DLL
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/elec/!svn/ver/993/software/CanLoggerClient/dll/System.Data.SQLite.DLL
+END
+ftd2xx.dll
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/elec/!svn/ver/993/software/CanLoggerClient/dll/ftd2xx.dll
+END
+sqlite3.dll
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/elec/!svn/ver/993/software/CanLoggerClient/dll/sqlite3.dll
+END
