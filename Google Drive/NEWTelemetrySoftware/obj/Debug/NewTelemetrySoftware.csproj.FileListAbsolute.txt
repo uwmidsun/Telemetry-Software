@@ -10,3 +10,6 @@ D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\bin\Deb
 D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\bin\Debug\CanLogger.exe
 D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\bin\Debug\CanLogger.pdb
 D:\Midnight sun\CanLoggerClient - backup\CanLoggerClient\CanLoggerClient\obj\Debug\Telemetry.TelemetryGUI.resources
+C:\Users\Gwangseung\Documents\GitHub\Telemetry-Software-\NEWTelemetrySoftware\bin\Debug\CanLogger.exe.config
+C:\Users\Gwangseung\Documents\GitHub\Telemetry-Software-\NEWTelemetrySoftware\obj\Debug\CanLogger.exe
+C:\Users\Gwangseung\Documents\GitHub\Telemetry-Software-\NEWTelemetrySoftware\obj\Debug\CanLogger.pdb

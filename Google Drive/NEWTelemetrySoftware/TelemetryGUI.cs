@@ -108,8 +108,8 @@ namespace Telemetry
                         // chart controls - misc
                         if (msg.getId() == Globals.MCBA + 14)
                         {
-                            DCAmpLabel.Text = arr[0].ToString();
-                            OdometerLabel.Text = arr[1].ToString();
+                            Misc_DCAmp.Text = arr[0].ToString();
+                            Misc_Odometer.Text = arr[1].ToString();
                         }
                     }
                 }
@@ -205,5 +205,11 @@ namespace Telemetry
             Button_Logger_Clear_Click(sender, e);
         }
 
+
+        // Algorithm for calculating the ideal velocity based on the information gathered
+        public void calcIdealVelocity()
+        {
+            // ?
+        }
     }
 }
